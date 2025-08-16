@@ -1,0 +1,25 @@
+# Isi lengkap untuk tools/tool_template.txt
+
+# Nama File: {file_name}.py
+
+from langchain_core.tools import tool
+import questionary  # Asumsikan keamanan sebagai default
+# ... (import lain yang mungkin dibutuhkan) ...
+
+@tool
+def {function_name}({arguments}) -> str:
+    \"\"\"
+    {docstring}
+    \"\"\"
+    try:
+        # PENTING: Lapisan keamanan konfirmasi manusia
+        if not questionary.confirm(f"PERHATIAN: AI ingin menjalankan tool baru '{function_name}'. Setuju?").ask():
+            return "Eksekusi tool baru dibatalkan oleh pengguna."
+            
+        # <<< TULIS LOGIKA INTI DARI TOOL BARU DI SINI >>>
+
+        # Berikan pesan sukses yang jelas
+        return "Tool baru '{function_name}' berhasil dieksekusi."
+    except Exception as e:
+        # Berikan pesan error yang jelas
+        return f"Gagal menjalankan tool '{function_name}': {e}" 

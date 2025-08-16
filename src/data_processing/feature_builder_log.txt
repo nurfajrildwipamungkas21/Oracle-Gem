@@ -1,0 +1,123 @@
+2025-05-30 01:17:33 - INFO - feature builder:575 - build_features - Memulai Feature Builder: Validasi dan Pembersihan Data Lanjutan
+2025-05-30 01:17:33 - INFO - feature builder:576 - build_features - Input file: C:\Users\Msi\Oracle Gem\data\processed\unified_market_data.csv
+2025-05-30 01:17:33 - INFO - feature builder:577 - build_features - Aksi Inkonsistensi OHLC: drop
+2025-05-30 01:17:33 - INFO - feature builder:578 - build_features - Aksi Outlier Harga (PctChange): none
+2025-05-30 01:17:33 - INFO - feature builder:579 - build_features - Aksi Outlier Volume: none
+2025-05-30 01:17:33 - INFO - feature builder:586 - build_features - Berhasil memuat data. Shape awal: (6420, 24)
+2025-05-30 01:17:33 - INFO - feature builder:599 - build_features - Aset yang terdeteksi: ['GOOGL', 'MSFT', 'N225', 'NVDA']
+2025-05-30 01:17:33 - INFO - feature builder:145 - standardize_pct_change_column_name - Menstandarkan nama kolom 'GOOGL_perubahan%' menjadi 'GOOGL_PctChange' untuk GOOGL.
+2025-05-30 01:17:33 - INFO - feature builder:154 - standardize_pct_change_column_name - Membersihkan dan mengonversi kolom GOOGL_PctChange...
+2025-05-30 01:17:33 - INFO - feature builder:102 - _clean_and_convert_pct_change -   Menerapkan pembagian 100 untuk 5965 nilai PctChange yang memiliki '%' pada string asli.
+2025-05-30 01:17:33 - INFO - feature builder:218 - validate_ohlc_consistency - --- Memulai Validasi Konsistensi OHLC untuk GOOGL (Aksi: drop) ---
+2025-05-30 01:17:33 - INFO - feature builder:300 - validate_ohlc_consistency - --- Validasi Konsistensi OHLC untuk GOOGL Selesai ---
+2025-05-30 01:17:33 - INFO - feature builder:306 - validate_numeric_values - --- Memulai Validasi Nilai Numerik untuk GOOGL ---
+2025-05-30 01:17:33 - INFO - feature builder:334 - validate_numeric_values - --- Validasi Nilai Numerik untuk GOOGL Selesai ---
+2025-05-30 01:17:33 - INFO - feature builder:340 - handle_missing_values_asset - --- Memulai Pemeriksaan Missing Values untuk GOOGL ---
+2025-05-30 01:17:33 - INFO - feature builder:352 - handle_missing_values_asset - Memeriksa NaN di kolom untuk GOOGL:
+2025-05-30 01:17:33 - INFO - feature builder:354 - handle_missing_values_asset -     Kolom: GOOGL_Open, Jumlah NaN awal: 454
+2025-05-30 01:17:33 - INFO - feature builder:354 - handle_missing_values_asset -     Kolom: GOOGL_High, Jumlah NaN awal: 454
+2025-05-30 01:17:33 - INFO - feature builder:354 - handle_missing_values_asset -     Kolom: GOOGL_Low, Jumlah NaN awal: 454
+2025-05-30 01:17:33 - INFO - feature builder:354 - handle_missing_values_asset -     Kolom: GOOGL_Close, Jumlah NaN awal: 454
+2025-05-30 01:17:33 - INFO - feature builder:354 - handle_missing_values_asset -     Kolom: GOOGL_Volume, Jumlah NaN awal: 454
+2025-05-30 01:17:33 - INFO - feature builder:354 - handle_missing_values_asset -     Kolom: GOOGL_PctChange, Jumlah NaN awal: 455
+2025-05-30 01:17:33 - INFO - feature builder:370 - handle_missing_values_asset - Volume sebelum data harga valid untuk GOOGL (saham) diubah/dibiarkan menjadi NaN.
+2025-05-30 01:17:33 - INFO - feature builder:383 - handle_missing_values_asset - Kolom harga GOOGL_Open (GOOGL) memiliki 454 NaN (dibiarkan).
+2025-05-30 01:17:33 - INFO - feature builder:383 - handle_missing_values_asset - Kolom harga GOOGL_High (GOOGL) memiliki 454 NaN (dibiarkan).
+2025-05-30 01:17:33 - INFO - feature builder:383 - handle_missing_values_asset - Kolom harga GOOGL_Low (GOOGL) memiliki 454 NaN (dibiarkan).
+2025-05-30 01:17:33 - INFO - feature builder:383 - handle_missing_values_asset - Kolom harga GOOGL_Close (GOOGL) memiliki 454 NaN (dibiarkan).
+2025-05-30 01:17:33 - INFO - feature builder:387 - handle_missing_values_asset - Kolom GOOGL_PctChange (GOOGL) memiliki 455 NaN (dibiarkan).
+2025-05-30 01:17:33 - INFO - feature builder:390 - handle_missing_values_asset - --- Pemeriksaan Missing Values untuk GOOGL Selesai ---
+2025-05-30 01:17:33 - INFO - feature builder:401 - handle_outliers_asset - --- Memulai Deteksi Outlier untuk GOOGL (Harga: none, Vol: none) ---
+2025-05-30 01:17:33 - INFO - feature builder:417 - handle_outliers_asset - 331 outlier perubahan harga harian untuk GOOGL. Batas IQR: [-0.0354, 0.0374]
+2025-05-30 01:17:33 - INFO - feature builder:446 - handle_outliers_asset - 588 outlier Volume (>0) untuk GOOGL. Batas atas IQR: 13894375000
+2025-05-30 01:17:33 - INFO - feature builder:460 - handle_outliers_asset - --- Deteksi Outlier untuk GOOGL Selesai ---
+2025-05-30 01:17:33 - INFO - feature builder:623 - build_features - Selesai validasi & pembersihan GOOGL. Shape: (6420, 6)
+2025-05-30 01:17:33 - INFO - feature builder:145 - standardize_pct_change_column_name - Menstandarkan nama kolom 'MSFT_change_%' menjadi 'MSFT_PctChange' untuk MSFT.
+2025-05-30 01:17:33 - INFO - feature builder:154 - standardize_pct_change_column_name - Membersihkan dan mengonversi kolom MSFT_PctChange...
+2025-05-30 01:17:33 - INFO - feature builder:102 - _clean_and_convert_pct_change -   Menerapkan pembagian 100 untuk 6420 nilai PctChange yang memiliki '%' pada string asli.
+2025-05-30 01:17:33 - INFO - feature builder:218 - validate_ohlc_consistency - --- Memulai Validasi Konsistensi OHLC untuk MSFT (Aksi: drop) ---
+2025-05-30 01:17:33 - INFO - feature builder:300 - validate_ohlc_consistency - --- Validasi Konsistensi OHLC untuk MSFT Selesai ---
+2025-05-30 01:17:33 - INFO - feature builder:306 - validate_numeric_values - --- Memulai Validasi Nilai Numerik untuk MSFT ---
+2025-05-30 01:17:33 - INFO - feature builder:334 - validate_numeric_values - --- Validasi Nilai Numerik untuk MSFT Selesai ---
+2025-05-30 01:17:33 - INFO - feature builder:340 - handle_missing_values_asset - --- Memulai Pemeriksaan Missing Values untuk MSFT ---
+2025-05-30 01:17:33 - INFO - feature builder:389 - handle_missing_values_asset - Tidak ada NaN ditemukan di kolom OHLCV & PctChange untuk MSFT.
+2025-05-30 01:17:33 - INFO - feature builder:390 - handle_missing_values_asset - --- Pemeriksaan Missing Values untuk MSFT Selesai ---
+2025-05-30 01:17:33 - INFO - feature builder:401 - handle_outliers_asset - --- Memulai Deteksi Outlier untuk MSFT (Harga: none, Vol: none) ---
+2025-05-30 01:17:33 - INFO - feature builder:417 - handle_outliers_asset - 319 outlier perubahan harga harian untuk MSFT. Batas IQR: [-0.0310, 0.0338]
+2025-05-30 01:17:33 - INFO - feature builder:446 - handle_outliers_asset - 202 outlier Volume (>0) untuk MSFT. Batas atas IQR: 106808750
+2025-05-30 01:17:33 - INFO - feature builder:460 - handle_outliers_asset - --- Deteksi Outlier untuk MSFT Selesai ---
+2025-05-30 01:17:33 - INFO - feature builder:623 - build_features - Selesai validasi & pembersihan MSFT. Shape: (6420, 6)
+2025-05-30 01:17:33 - INFO - feature builder:145 - standardize_pct_change_column_name - Menstandarkan nama kolom 'N225_change_%' menjadi 'N225_PctChange' untuk N225.
+2025-05-30 01:17:33 - INFO - feature builder:154 - standardize_pct_change_column_name - Membersihkan dan mengonversi kolom N225_PctChange...
+2025-05-30 01:17:33 - INFO - feature builder:102 - _clean_and_convert_pct_change -   Menerapkan pembagian 100 untuk 6418 nilai PctChange yang memiliki '%' pada string asli.
+2025-05-30 01:17:33 - INFO - feature builder:218 - validate_ohlc_consistency - --- Memulai Validasi Konsistensi OHLC untuk N225 (Aksi: drop) ---
+2025-05-30 01:17:33 - WARNING - feature builder:273 - validate_ohlc_consistency - Ditemukan 3 baris dimana Close di luar rentang [Low, High] untuk N225.
+2025-05-30 01:17:33 - INFO - feature builder:278 - validate_ohlc_consistency -   Menghapus 3 baris dengan Close di luar [Low, High] untuk N225.
+2025-05-30 01:17:33 - INFO - feature builder:295 - validate_ohlc_consistency - Ditemukan 161 hari tanpa pergerakan harga (OHLC sama) dan Volume = 0 untuk N225.
+2025-05-30 01:17:33 - INFO - feature builder:299 - validate_ohlc_consistency - Total 3 baris dihapus dari N225 karena inkonsistensi OHLC (aksi: drop).
+2025-05-30 01:17:33 - INFO - feature builder:300 - validate_ohlc_consistency - --- Validasi Konsistensi OHLC untuk N225 Selesai ---
+2025-05-30 01:17:33 - INFO - feature builder:306 - validate_numeric_values - --- Memulai Validasi Nilai Numerik untuk N225 ---
+2025-05-30 01:17:33 - INFO - feature builder:334 - validate_numeric_values - --- Validasi Nilai Numerik untuk N225 Selesai ---
+2025-05-30 01:17:33 - INFO - feature builder:340 - handle_missing_values_asset - --- Memulai Pemeriksaan Missing Values untuk N225 ---
+2025-05-30 01:17:33 - INFO - feature builder:352 - handle_missing_values_asset - Memeriksa NaN di kolom untuk N225:
+2025-05-30 01:17:33 - INFO - feature builder:354 - handle_missing_values_asset -     Kolom: N225_Open, Jumlah NaN awal: 2
+2025-05-30 01:17:33 - INFO - feature builder:354 - handle_missing_values_asset -     Kolom: N225_High, Jumlah NaN awal: 2
+2025-05-30 01:17:33 - INFO - feature builder:354 - handle_missing_values_asset -     Kolom: N225_Low, Jumlah NaN awal: 2
+2025-05-30 01:17:33 - INFO - feature builder:354 - handle_missing_values_asset -     Kolom: N225_Close, Jumlah NaN awal: 2
+2025-05-30 01:17:33 - INFO - feature builder:354 - handle_missing_values_asset -     Kolom: N225_Volume, Jumlah NaN awal: 2
+2025-05-30 01:17:33 - INFO - feature builder:354 - handle_missing_values_asset -     Kolom: N225_PctChange, Jumlah NaN awal: 2
+2025-05-30 01:17:33 - INFO - feature builder:360 - handle_missing_values_asset - Aset N225 adalah indeks. Volume 0 atau NaN akan diubah/dibiarkan menjadi NaN.
+2025-05-30 01:17:33 - INFO - feature builder:383 - handle_missing_values_asset - Kolom harga N225_Open (N225) memiliki 2 NaN (dibiarkan).
+2025-05-30 01:17:33 - INFO - feature builder:383 - handle_missing_values_asset - Kolom harga N225_High (N225) memiliki 2 NaN (dibiarkan).
+2025-05-30 01:17:33 - INFO - feature builder:383 - handle_missing_values_asset - Kolom harga N225_Low (N225) memiliki 2 NaN (dibiarkan).
+2025-05-30 01:17:33 - INFO - feature builder:383 - handle_missing_values_asset - Kolom harga N225_Close (N225) memiliki 2 NaN (dibiarkan).
+2025-05-30 01:17:33 - INFO - feature builder:387 - handle_missing_values_asset - Kolom N225_PctChange (N225) memiliki 2 NaN (dibiarkan).
+2025-05-30 01:17:33 - INFO - feature builder:390 - handle_missing_values_asset - --- Pemeriksaan Missing Values untuk N225 Selesai ---
+2025-05-30 01:17:33 - INFO - feature builder:401 - handle_outliers_asset - --- Memulai Deteksi Outlier untuk N225 (Harga: none, Vol: none) ---
+2025-05-30 01:17:33 - INFO - feature builder:417 - handle_outliers_asset - 292 outlier perubahan harga harian untuk N225. Batas IQR: [-0.0279, 0.0289]
+2025-05-30 01:17:33 - INFO - feature builder:435 - handle_outliers_asset - Aset N225 adalah indeks. Deteksi outlier volume berbasis IQR dilewati.
+2025-05-30 01:17:33 - INFO - feature builder:460 - handle_outliers_asset - --- Deteksi Outlier untuk N225 Selesai ---
+2025-05-30 01:17:33 - INFO - feature builder:623 - build_features - Selesai validasi & pembersihan N225. Shape: (6417, 6)
+2025-05-30 01:17:33 - INFO - feature builder:145 - standardize_pct_change_column_name - Menstandarkan nama kolom 'NVDA_change_%' menjadi 'NVDA_PctChange' untuk NVDA.
+2025-05-30 01:17:33 - INFO - feature builder:154 - standardize_pct_change_column_name - Membersihkan dan mengonversi kolom NVDA_PctChange...
+2025-05-30 01:17:33 - INFO - feature builder:102 - _clean_and_convert_pct_change -   Menerapkan pembagian 100 untuk 6420 nilai PctChange yang memiliki '%' pada string asli.
+2025-05-30 01:17:33 - INFO - feature builder:218 - validate_ohlc_consistency - --- Memulai Validasi Konsistensi OHLC untuk NVDA (Aksi: drop) ---
+2025-05-30 01:17:33 - INFO - feature builder:300 - validate_ohlc_consistency - --- Validasi Konsistensi OHLC untuk NVDA Selesai ---
+2025-05-30 01:17:33 - INFO - feature builder:306 - validate_numeric_values - --- Memulai Validasi Nilai Numerik untuk NVDA ---
+2025-05-30 01:17:33 - INFO - feature builder:334 - validate_numeric_values - --- Validasi Nilai Numerik untuk NVDA Selesai ---
+2025-05-30 01:17:33 - INFO - feature builder:340 - handle_missing_values_asset - --- Memulai Pemeriksaan Missing Values untuk NVDA ---
+2025-05-30 01:17:33 - INFO - feature builder:389 - handle_missing_values_asset - Tidak ada NaN ditemukan di kolom OHLCV & PctChange untuk NVDA.
+2025-05-30 01:17:33 - INFO - feature builder:390 - handle_missing_values_asset - --- Pemeriksaan Missing Values untuk NVDA Selesai ---
+2025-05-30 01:17:33 - INFO - feature builder:401 - handle_outliers_asset - --- Memulai Deteksi Outlier untuk NVDA (Harga: none, Vol: none) ---
+2025-05-30 01:17:33 - INFO - feature builder:417 - handle_outliers_asset - 323 outlier perubahan harga harian untuk NVDA. Batas IQR: [-0.0700, 0.0737]
+2025-05-30 01:17:33 - INFO - feature builder:446 - handle_outliers_asset - 416 outlier Volume (>0) untuk NVDA. Batas atas IQR: 1141781250
+2025-05-30 01:17:33 - INFO - feature builder:460 - handle_outliers_asset - --- Deteksi Outlier untuk NVDA Selesai ---
+2025-05-30 01:17:33 - INFO - feature builder:623 - build_features - Selesai validasi & pembersihan NVDA. Shape: (6420, 6)
+2025-05-30 01:17:33 - INFO - feature builder:634 - build_features - Penggabungan akhir selesai. Shape sebelum restructure: (6420, 24)
+2025-05-30 01:17:33 - INFO - feature builder:466 - restructure_and_finalize - --- Memulai Penataan Ulang Kolom dan Finalisasi ---
+2025-05-30 01:17:34 - INFO - feature builder:519 - restructure_and_finalize - Kolom Volume untuk indeks N225 adalah semua 0/NaN, akan diubah menjadi semua NaN.
+2025-05-30 01:17:34 - INFO - feature builder:545 - restructure_and_finalize - Urutan kolom akhir: ['GOOGL_Open', 'GOOGL_High', 'GOOGL_Low', 'GOOGL_Close', 'GOOGL_Volume', 'GOOGL_PctChange', 'MSFT_Open', 'MSFT_High', 'MSFT_Low', 'MSFT_Close', 'MSFT_Volume', 'MSFT_PctChange', 'N225_Open', 'N225_High', 'N225_Low', 'N225_Close', 'N225_Volume', 'N225_PctChange', 'NVDA_Open', 'NVDA_High', 'NVDA_Low', 'NVDA_Close', 'NVDA_Volume', 'NVDA_PctChange']
+2025-05-30 01:17:34 - INFO - feature builder:550 - restructure_and_finalize - INFO FINAL: Total 9170 NaN di dataset akhir:
+2025-05-30 01:17:34 - INFO - feature builder:552 - restructure_and_finalize -     Kolom: GOOGL_Open, Jumlah NaN: 454
+2025-05-30 01:17:34 - INFO - feature builder:552 - restructure_and_finalize -     Kolom: GOOGL_High, Jumlah NaN: 454
+2025-05-30 01:17:34 - INFO - feature builder:552 - restructure_and_finalize -     Kolom: GOOGL_Low, Jumlah NaN: 454
+2025-05-30 01:17:34 - INFO - feature builder:552 - restructure_and_finalize -     Kolom: GOOGL_Close, Jumlah NaN: 454
+2025-05-30 01:17:34 - INFO - feature builder:552 - restructure_and_finalize -     Kolom: GOOGL_Volume, Jumlah NaN: 454
+2025-05-30 01:17:34 - INFO - feature builder:552 - restructure_and_finalize -     Kolom: GOOGL_PctChange, Jumlah NaN: 455
+2025-05-30 01:17:34 - INFO - feature builder:552 - restructure_and_finalize -     Kolom: N225_Open, Jumlah NaN: 5
+2025-05-30 01:17:34 - INFO - feature builder:552 - restructure_and_finalize -     Kolom: N225_High, Jumlah NaN: 5
+2025-05-30 01:17:34 - INFO - feature builder:552 - restructure_and_finalize -     Kolom: N225_Low, Jumlah NaN: 5
+2025-05-30 01:17:34 - INFO - feature builder:552 - restructure_and_finalize -     Kolom: N225_Close, Jumlah NaN: 5
+2025-05-30 01:17:34 - INFO - feature builder:552 - restructure_and_finalize -     Kolom: N225_Volume, Jumlah NaN: 6420
+2025-05-30 01:17:34 - INFO - feature builder:552 - restructure_and_finalize -     Kolom: N225_PctChange, Jumlah NaN: 5
+2025-05-30 01:17:34 - INFO - feature builder:559 - restructure_and_finalize - --- Penataan Ulang Kolom dan Finalisasi Selesai ---
+2025-05-30 01:17:34 - INFO - feature builder:638 - build_features - Total baris di DataFrame final: 6420
+2025-05-30 01:17:34 - INFO - feature builder:640 - build_features - Statistik deskriptif (head):
+        GOOGL_Open   GOOGL_High    GOOGL_Low  GOOGL_Close       GOOGL_Volume  GOOGL_PctChange    MSFT_Open    MSFT_High     MSFT_Low   MSFT_Close      MSFT_Volume  MSFT_PctChange     N225_Open     N225_High      N225_Low    N225_Close  N225_Volume  N225_PctChange    NVDA_Open    NVDA_High     NVDA_Low   NVDA_Close       NVDA_Volume  NVDA_PctChange
+count  5966.000000  5966.000000  5966.000000  5966.000000             5966.0      5965.000000  6420.000000  6420.000000  6420.000000  6420.000000           6420.0     6420.000000   6415.000000   6415.000000   6415.000000   6415.000000          0.0     6415.000000  6420.000000  6420.000000  6420.000000  6420.000000            6420.0     6420.000000
+mean   5038.600235  5092.016426  4986.089842  5040.187730  6588224941.334228         0.000806   110.462618   111.533812   109.437310   110.606469   45639415.88785        0.001113  18229.117844  18331.140234  18114.528973  18224.738022          NaN        0.000190    11.928813    12.152223    11.676414    11.922486  597602325.545171        0.003857
+std    4950.632484  5004.913864  4899.502535  4952.768191  6800787691.917232         0.022559   123.707419   124.904505   122.641736   123.955855  26728217.258263        0.016238   8245.087657   8287.042125   8198.707945   8243.636944          NaN        0.014356    28.140779    28.653930    27.539762    28.119366   464808161.34287        0.039664
+min     248.000000   255.000000   248.000000   250.000000        192000000.0        -0.950500    15.200000    15.620000    14.870000    15.150000        7160000.0       -0.094800   7059.770000   7100.770000   6994.900000   7054.980000          NaN       -0.124000     0.080000     0.080000     0.080000     0.080000       105160000.0       -0.333300
+25%    1324.250000  1338.250000  1310.250000  1324.000000       2941250000.0        -0.008100    27.290000    27.490000    27.110000    27.330000       25227500.0       -0.006700  11023.280000  11087.675000  10941.760000  11016.920000          NaN       -0.006600     0.330000     0.340000     0.330000     0.330000       359862500.0       -0.016100
+2025-05-30 01:17:34 - INFO - feature builder:658 - build_features - Dataset bersih disimpan ke: C:\Users\Msi\Oracle Gem\src\data_processing\validated_cleaned_market_data.csv
+2025-05-30 01:17:34 - INFO - feature builder:661 - build_features - Proses Feature Builder Selesai.

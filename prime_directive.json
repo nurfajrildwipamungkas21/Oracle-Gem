@@ -1,0 +1,95 @@
+{
+  "prime_directive": {
+    "description": "Misi multi-fase: 1. Membangun model dasar yang stabil. 2. Berevolusi dengan merumuskan strategi fitur baru. 3. Berevolusi lebih lanjut dengan mensintesis aturan penalaran neuro-simbolik internal.",
+    "metrics": {
+      "success": "Semua siklus pelatihan selesai, dan model telah berhasil mengintegrasikan setidaknya satu set fitur atau aturan baru yang dibuat secara mandiri.",
+      "failure": "Gagal menyelesaikan salah satu siklus pelatihan inti atau gagal menghasilkan/mengintegrasikan evolusi mandiri."
+    },
+    "steps": [
+      {
+        "task_name": "run_pre_train_defensive_systems",
+        "params": {},
+        "reasoning": "TAHAP 1 (FONDASI): Membangun sistem pertahanan dasar (Input Armor, dll.) sebelum pelatihan inti."
+      },
+      {
+        "task_name": "run_pre_train",
+        "params": {
+          "mode": "pre-train",
+          "selected_tickers": ["NVDA", "GOOGL", "MSFT"],
+          "max_epochs": 80
+        },
+        "reasoning": "TAHAP 2 (FONDASI): Melatih model dasar pada aset inti untuk mempelajari representasi pasar yang stabil (Pre-training)."
+      },
+      {
+        "task_name": "run_continuous_training",
+        "params": {
+          "mode": "fine-tune",
+          "selected_tickers": ["NVDA", "GOOGL", "MSFT"],
+          "max_epochs": 50
+        },
+        "reasoning": "TAHAP 3 (FONDASI): Melakukan fine-tuning awal untuk mendapatkan performa baseline sebelum evolusi."
+      },
+      {
+        "task_name": "run_strategy_creation_cycle",
+        "params": {},
+        "reasoning": "TAHAP 4 (EVOLUSI FITUR): Menganalisis performa, merumuskan hipotesis fitur baru, dan menulis kodenya."
+      },
+      {
+        "task_name": "run_strategy_backtest",
+        "params": {},
+        "reasoning": "TAHAP 4.5 (VALIDASI STRATEGI): Menguji strategi baru secara otonom di sandbox untuk memvalidasi dampaknya sebelum digunakan."
+      },
+      {
+        "task_name": "run_continuous_training",
+        "params": {
+          "mode": "fine-tune",
+          "selected_tickers": ["NVDA", "GOOGL", "MSFT"],
+          "max_epochs": 50
+        },
+        "reasoning": "TAHAP 5 (VALIDASI FITUR): Melatih ulang model untuk menguji apakah fitur baru dari AI meningkatkan performa."
+      },
+      {
+        "task_name": "discover_new_rules_with_ilp",
+        "params": {},
+        "reasoning": "TAHAP 6 (EVOLUSI LOGIKA): Menambang aturan kausal baru langsung dari data mentah menggunakan simulasi Inductive Logic Programming."
+      },
+      {
+        "task_name": "run_continuous_training",
+        "params": {
+          "mode": "fine-tune",
+          "selected_tickers": ["NVDA", "GOOGL", "MSFT"],
+          "max_epochs": 50
+        },
+        "reasoning": "TAHAP 7 (VALIDASI LOGIKA): Melatih ulang model untuk mengintegrasikan dan mengoptimalkan aturan neuro-simbolik baru."
+      },
+      {
+        "task_name": "run_world_model_training",
+        "params": {
+          "wm_latent_dim": 32,
+          "vae_epochs": 20,
+          "mdn_epochs": 15
+        },
+        "reasoning": "TAHAP 8 (IMAJINASI): Melatih 'World Model' (VAE+MDN-RNN) untuk mempelajari dinamika pasar dan memungkinkannya 'bermimpi'."
+      },
+      {
+        "task_name": "run_world_model_planning_cycle",
+        "params": {
+          "high_level_goal": "Berdasarkan pemahaman pasar dari imajinasi, formulasikan tiga strategi trading potensial untuk saham NVDA dalam seminggu ke depan, dengan mempertimbangkan skenario optimis, pesimis, dan netral."
+        },
+        "reasoning": "TAHAP 9 (PERENCANAAN STRATEGIS): Menggunakan World Model untuk 'bermimpi' dan memilih rencana aksi terbaik sebelum eksekusi nyata."
+      },
+      {
+        "task_name": "run_autonomous_task_agent",
+        "params": {
+          "high_level_goal": "execute_best_plan_from_world_model"
+        },
+        "reasoning": "TAHAP 10 (EKSEKUSI TAKTIS): Mengeksekusi rencana aksi yang paling menjanjikan yang telah dipilih oleh World Model Planner."
+      },
+      {
+        "task_name": "predict_and_visualize",
+        "params": {},
+        "reasoning": "TAHAP 12 (PREDIKSI FINAL): Menjalankan prediksi final setelah semua siklus evolusi dan pelatihan selesai."
+      }
+    ]
+  }
+}
