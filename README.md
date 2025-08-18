@@ -1,4 +1,3 @@
-ini versi yang lebih humble dan tanpa penebalan teks:
 
 # 🧩 Oracle Gem
 
@@ -59,3 +58,6 @@ Oracle Gem adalah kerangka kerja kecerdasan buatan yang dirancang agar modular, 
 <img width="1920" height="1080" alt="Screenshot (439)" src="https://github.com/user-attachments/assets/8faeacfb-6874-47b3-ba6f-35c8d40d8226" />
 <img width="1920" height="1080" alt="Screenshot (440)" src="https://github.com/user-attachments/assets/3e9e8165-b67b-4768-8e65-cb8901044075" />
 <img width="1920" height="1080" alt="Screenshot (441)" src="https://github.com/user-attachments/assets/59cd7e76-8a87-400f-8790-8ffb593be2ad" />
+<img width="1920" height="1080" alt="Screenshot (442)" src="https://github.com/user-attachments/assets/ed452714-b714-4a81-8da3-5f21dbff0488" />
+
+
